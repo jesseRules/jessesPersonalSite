@@ -1,0 +1,672 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestAPICore</name>
+    </assembly>
+    <members>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.IsNull``1(``0)">
+            <summary>
+            Checks if a struct has been instantiated.
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.To_yyyy_MM_dd(System.DateTime)">
+            <summary>
+            Represent a date in "yyyy-MM-dd" format
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.Truncate(System.DateTime,System.TimeSpan)">
+            <summary>
+            truncate milliseconds off a .net datetime
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.ParseEnumFAST``1(System.String,System.String)">
+            <summary>
+            UNFINISHED, an expansion of ParseEnum, use a static dictionary for speedy lookups?
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="caller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.Compress(System.Byte[])">
+            <summary>
+            GZip using integrated .NET compression library.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.Decompress(System.Byte[])">
+            <summary>
+            UnGZip using integrated .NET compression library.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.split(System.String,System.Char)">
+            <summary>
+            Split a string by ';' characters. Accepts nulls :)
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Helpers.Sanitize(System.String,System.String)">
+            <summary>
+            Strips characters that are non-conducive to being in a file name.
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.ParseHelpers.decimal2int(System.String,System.Int32)">
+            <summary>
+            FastParse a decimal string into a int
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Utils.GetAllItems``1">
+            <summary>
+            Gets all items for an enum value.
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Utils.GetLocalPath(System.String,System.String)">
+            <summary>
+            Does a Path.Combine() and creates the destination directory if not existing
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Common.Extensions.Utils.GetCallingMethodName(System.String)">
+            <summary>
+            Handy to find originating method name when debugging.
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Controllers.BlogController.Get">
+            <summary>
+            Gets entire list of Blog Entries
+            </summary>
+            <remarks>Uses a MongoDB hosted on Azure</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.BlogController.GetBlogList(System.Int32,System.Int32)">
+            <summary>
+            Gets a Blog Lists
+            </summary>
+            <param name="count"></param>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.BlogController.Get(System.String)">
+            <summary>
+            Gets a Blog Entry by ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.BlogController.Create(RestAPICore.Models.BlogModel)">
+            <summary>
+            Add a Blog Entry (set id to null)
+            </summary>
+            <remarks>Uses a MongoDB hosted on Azure</remarks>
+            <param name="blog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.BlogController.Update(System.String,RestAPICore.Models.BlogModel)">
+            <summary>
+            Update Blog Entry by ID
+            </summary>
+            <remarks>Uses a MongoDB hosted on Azure</remarks>
+            <param name="id"></param>
+            <param name="blogIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.BlogController.Delete(System.String)">
+            <summary>
+            Delete a Blog Entry by ID
+            </summary>
+            <remarks>Uses a MongoDB hosted on Azure</remarks>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.ChartsController.getCodingSkills">
+            <summary>
+            Returns a list of coding skills
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.ChartsController.getSoftSkills">
+            <summary>
+            Returns list of soft skills
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.ContactController.Get(System.String)">
+            <summary>
+            Gets a Contact Entry by ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.ContactController.Create(RestAPICore.Models.ContactModel)">
+            <summary>
+            Add a Conact Entry (set id to null)
+            </summary>
+            <remarks>Uses a MongoDB hosted on Azure</remarks>
+            <param name="contact"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.GoogleController.getMarkers">
+            <summary>
+            Returns a list of Map Markers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.GooglePhotosController.getLibraries">
+            <summary>
+            Returns a list of libraries
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.GooglePhotosController.getLibraryItems(System.String)">
+            <summary>
+            Returns a library
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.SubscriptionController.Get(System.String)">
+            <summary>
+            Gets a Subscription Entry by ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.SubscriptionController.Create(RestAPICore.Models.SubscriptionModel)">
+            <summary>
+            Add a Subscription Entry (set id to null)
+            </summary>
+            <remarks>Uses a MongoDB hosted on Azure</remarks>
+            <param name="subscription"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.Twitter2Controller.getSearchRecent(System.String,System.Int32)">
+            <summary>
+            Search Twitter by Keyword
+            </summary>
+            <param name="keyword"></param>
+            <param name="tweetCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.Twitter2Controller.getSearchRecentForDisplay(System.String,System.Int32)">
+            <summary>
+            Search Twitter by Keyword For Display
+            </summary>
+            <param name="keyword"></param>
+            <param name="tweetCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.TwitterController.getTweetsByUser(System.String,System.Int32)">
+            <summary>
+            Get Tweets bt UserName limit 100
+            </summary>
+            <param name="userName"></param>
+            <param name="tweetCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.TwitterController.getTweetsByGeoLocation(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get Tweets by Geo Location
+            </summary>
+            <param name="lat"></param>
+            <param name="lng"></param>
+            <param name="radiusMiles"></param>
+            <param name="tweetCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.TwitterController.getTweetsByKeyword(System.String,System.Int32)">
+            <summary>
+            Search Twitter by Keyword
+            </summary>
+            <param name="keyword"></param>
+            <param name="tweetCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.TwitterController.getTweetsByKeywordAfterId(System.String,System.Int32,System.String)">
+            <summary>
+            Search Twitter by Keyword
+            </summary>
+            <param name="keyword"></param>
+            <param name="tweetCount"></param>
+            <param name="afterId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:RestAPICore.Interfaces.IPagingToken.nextPageToken">
+            <summary>
+            A continuation token to get the next page of the results.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Messages.mediaItemsCreateResponse.newMediaItemResults">
+            <summary>
+            Output only. List of media items created.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Messages.AddEnrichmentRequest">
+            <summary>
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#request-body
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Messages.AddEnrichmentRequest.newEnrichmentItem">
+            <summary>
+            The enrichment to be added.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Messages.AddEnrichmentRequest.albumPosition">
+            <summary>
+            The position in the album where the enrichment is to be inserted.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Messages.AddEnrichmentResponse">
+            <summary>
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#response-body
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Messages.AddEnrichmentResponse.enrichmentItem">
+            <summary>
+            Output only. Enrichment which was added.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosScope.ReadOnly">
+             <summary>
+             Read access only.
+            
+             List items from the library and all albums, access all media items and list albums owned by the user, including those which have been shared with them.
+            
+             For albums shared by the user, share properties are only returned if the.sharing scope has also been granted.
+            
+             The ShareInfo property for albums and the contributorInfo for mediaItems is only available if the.sharing scope has also been granted.
+             </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosScope.AppendOnly">
+             <summary>
+             Write access only.
+            
+             Access to upload bytes, create media items, create albums, and add enrichments.Only allows new media to be created in the user's library and in albums created by the app.
+             </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosScope.AppCreatedData">
+             <summary>
+             Read access to media items and albums created by the developer. For more information, see Access media items and List library contents, albums, and media items.
+            
+             Intended to be requested together with the.appendonly scope.
+             </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosScope.Access">
+            <summary>
+            Access to both the .appendonly and .readonly scopes. Doesn't include .sharing.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosScope.Sharing">
+             <summary>
+             Access to sharing calls.
+            
+             Access to create an album, share it, upload media items to it, and join a shared album.
+             </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosPositionType.POSITION_TYPE_UNSPECIFIED">
+            <summary>
+            Default value if this enum isn't set.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosPositionType.FIRST_IN_ALBUM">
+            <summary>
+            At the beginning of the album.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosPositionType.LAST_IN_ALBUM">
+            <summary>
+            At the end of the album.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosPositionType.AFTER_MEDIA_ITEM">
+            <summary>
+            After a media item.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.GooglePhotosPositionType.AFTER_ENRICHMENT_ITEM">
+            <summary>
+            After an enrichment item.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.id">
+            <summary>
+            Identifier for the album. This is a persistent identifier that can be used between sessions to identify this album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.title">
+            <summary>
+            Name of the album displayed to the user in their Google Photos account. This string shouldn't be more than 500 characters.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.productUrl">
+            <summary>
+            [Output only] Google Photos URL for the album. The user needs to be signed in to their Google Photos account to access this link.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.coverPhotoBaseUrl">
+            <summary>
+            [Output only] A URL to the cover photo's bytes. This shouldn't be used as is. Parameters should be appended to this URL before use. See the developer documentation for a complete list of supported parameters. For example, '=w2048-h1024' sets the dimensions of the cover photo to have a width of 2048 px and height of 1024 px.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.coverPhotoMediaItemId">
+            <summary>
+            [Output only] Identifier for the media item associated with the cover photo.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.isWriteable">
+            <summary>
+            [Output only] True if you can create media items in this album. This field is based on the scopes granted and permissions of the album. If the scopes are changed or permissions of the album are changed, this field is updated.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.mediaItemsCount">
+            <summary>
+            [Output only] The number of media items in the album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Album.shareInfo">
+            <summary>
+            [Output only] Information related to shared albums.This field is only populated if the album is a shared album, the developer created the album and the user has granted the photoslibrary.sharing scope.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.ShareInfo.sharedAlbumOptions">
+            <summary>
+            Options that control the sharing of an album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.ShareInfo.shareableUrl">
+            <summary>
+            A link to the album that's now shared on the Google Photos website and app. Anyone with the link can access this shared album and see all of the items present in the album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.ShareInfo.shareToken">
+            <summary>
+            A token that can be used by other users to join this shared album via the API.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.ShareInfo.isJoined">
+            <summary>
+            True if the user has joined the album. This is always true for the owner of the shared album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.ShareInfo.isOwned">
+            <summary>
+            True if the user owns the album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.SharedAlbumOptions.isCollaborative">
+            <summary>
+            True if the shared album allows collaborators (users who have joined the album) to add media items to it. Defaults to false.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.SharedAlbumOptions.isCommentable">
+            <summary>
+            True if the shared album allows the owner and the collaborators (users who have joined the album) to add comments to the album. Defaults to false.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.NewMediaItem.description">
+            <summary>
+            Description of the media item. This will be shown to the user in the item's info section in the Google Photos app. This string shouldn't be more than 1000 characters.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.NewMediaItem.simpleMediaItem">
+            <summary>
+            A new media item that has been uploaded via the included uploadToken.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.SimpleMediaItem">
+            <summary>
+            https://developers.google.com/photos/library/reference/rest/v1/mediaItems/batchCreate#SimpleMediaItem
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.SimpleMediaItem.uploadToken">
+            <summary>
+            Token identifying the media bytes that have been uploaded to Google.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.SimpleMediaItem.fileName">
+            <summary>
+            File name with extension of the media item. This is shown to the user in Google Photos. The file name specified during the byte upload process is ignored if this field is set. The file name, including the file extension, shouldn't be more than 255 characters. This is an optional field.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.NewEnrichmentItem">
+            <summary>
+            A new enrichment item to be added to an album, used by the albums.addEnrichment call.
+            Note: Only one property can be set.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.NewEnrichmentItem.textEnrichment">
+            <summary>
+            Text to be added to the album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.NewEnrichmentItem.locationEnrichment">
+            <summary>
+            Location to be added to the album.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.NewEnrichmentItem.mapEnrichment">
+            <summary>
+            Map to be added to the album.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.EnrichmentItem">
+            <summary>
+            An enrichment item.
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#enrichmentitem
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.EnrichmentItem.id">
+            <summary>
+            Identifier of the enrichment item.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.TextEnrichment">
+            <summary>
+            Text for this enrichment item.
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#textenrichment
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.LocationEnrichment">
+            <summary>
+            An enrichment containing a single location.
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#locationenrichment
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.LocationEnrichment.location">
+            <summary>
+            Location for this enrichment item.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.Location">
+            <summary>
+            Represents a physical location.
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#location
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Location.locationName">
+            <summary>
+            Name of the location to be displayed.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Location.latlng">
+            <summary>
+            Position of the location on the map.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.Latlng">
+            <summary>
+            An object representing a latitude/longitude pair. This is expressed as a pair of doubles representing degrees latitude and degrees longitude. Unless specified otherwise, this must conform to the WGS84 standard. Values must be within normalized ranges.
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#latlng
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Latlng.latitude">
+            <summary>
+            The latitude in degrees. It must be in the range [-90.0, +90.0].
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.Latlng.longitude">
+            <summary>
+            The longitude in degrees. It must be in the range [-180.0, +180.0].
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Models.MapEnrichment">
+            <summary>
+            An enrichment containing a map, showing origin and destination locations.
+            https://developers.google.com/photos/library/reference/rest/v1/albums/addEnrichment#mapenrichment
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MapEnrichment.origin">
+            <summary>
+            Origin location for this enrichment item.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MapEnrichment.destination">
+            <summary>
+            Destination location for this enrichment item.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.id">
+            <summary>
+            A permanent, stable ID used to identify the object.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.description">
+            <summary>
+            Description of the media item as seen inside Google Photos.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.productUrl">
+            <summary>
+            A link to the image inside Google Photos. This link can't be opened by the developer, only by the user.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.baseUrl">
+            <summary>
+            Used to access the raw bytes. For more information, see Base URLs.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.syncDate">
+            <summary>
+            Used to help determine if the media item is more than 1 hour old, if so then the baseUrl is expired.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.mimeType">
+            <summary>
+            The type of the media item to help easily identify the type of media (for example: image/jpg).
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.mediaMetadata">
+            <summary>
+            Varies depending on the underlying type of the media, such as, photo or video. To reduce the payload, field masks can be used.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.filename">
+            <summary>
+            The filename of the media item shown to the user in the Google Photos app (within the item's info section).
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.MediaItem.contributorInfo">
+             <summary>
+             This field is only populated if the media item is in a shared album created by this app and the user has granted the .sharing scope.
+            
+             Contains information about the contributor who added this media item. For more details, see Share media.
+             </summary>
+        </member>
+        <member name="P:RestAPICore.Models.GooglePhotosOptions.BaseAddress">
+            <summary>
+            The default endpoint for REST API requests, currently defaults to REST API v1.0
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.GooglePhotosOptions.User">
+            <summary>
+            The email address of the Google Account that holds the photos.
+            e.g. your.email@mydomain.com
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.GooglePhotosOptions.Scopes">
+            <summary>
+            Security Scopes, i.e. access levels.
+            Note: When changing scopes under the same User you must manually delete the local JSON file to clear the local cache,
+            you can use the GooglePhotosOptions.FileDataStoreFullPathDefault property to locate the path to the JSON file(s).
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.GooglePhotosOptions.ClientId">
+            <summary>
+            Google Client Id string, numerical/alphanumeric.
+            e.g. 012345678901-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.apps.googleusercontent.com
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.GooglePhotosOptions.ClientSecret">
+            <summary>
+            Google Client Secret string, alphabetical.
+            i.e. abcabcabcabcabcabcabcabc
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.GooglePhotosOptions.FileDataStoreFullPathOverride">
+            <summary>
+            Folder path to locally cached OAuth 2.0 JSON file.
+            If FileDataStoreFullPathOverride is left as null then Google Auth library will use the
+            FileDataStoreFullPathDefault location to store a cached OAuth 2.0 JSON file per User.
+            </summary>
+        </member>
+        <member name="P:RestAPICore.Models.GooglePhotosOptions.FileDataStoreFullPathDefault">
+            <summary>
+            e.g. Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Google.Apis.Auth");
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.POST_albums_addEnrichment">
+            <summary>
+            POST Adds an enrichment at a specified position in a defined album.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.POST_albums_batchAddMediaItems">
+            <summary>
+            POST Adds one or more media items in a user's Google Photos library to an album.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.POST_albums_batchRemoveMediaItems">
+            <summary>
+            POST Removes one or more media items from a specified album.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.GET_albums">
+            <summary>
+            POST Creates an album in a user's Google Photos library.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.POST_albums">
+            <summary>
+            GET Lists all albums shown to a user in the Albums tab of the Google Photos app.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.GET_album">
+            <summary>
+            Returns the album based on the specified albumId.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.POST_share">
+            <summary>
+            Marks an album as shared and accessible to other users.
+            </summary>
+        </member>
+        <member name="F:RestAPICore.Models.RequestUris.POST_unshare">
+            <summary>
+            Marks a previously shared album as private.
+            </summary>
+        </member>
+        <member name="T:RestAPICore.Services.GooglePhotosService">
+            <summary>
+            This class chains together the inherited GooglePhotosServiceBase REST methods into more useful combos/actions.
+            </summary>
+        </member>
+        <member name="M:RestAPICore.Services.GooglePhotosServiceBase.GetAlbumsAsync(System.Int32,System.Boolean,System.Threading.CancellationToken)">
+             <summary>
+            
+             </summary>
+             <param name="pageSize">Maximum number of albums to return in the response. Fewer albums might be returned than the specified number. The default pageSize is 20, the maximum is 50.</param>
+             <param name="excludeNonAppCreatedData">If set, the results exclude media items that were not created by this app. Defaults to false (all albums are returned). This field is ignored if the photoslibrary.readonly.appcreateddata scope is used.</param>
+             <param name="cancellationToken">Cancel Token</param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>
