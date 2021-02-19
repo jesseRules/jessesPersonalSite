@@ -58,7 +58,7 @@ namespace RestAPICore.Controllers
         }
 
         /// <summary>
-        /// Returns a library
+        /// Returns a library of photos
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
