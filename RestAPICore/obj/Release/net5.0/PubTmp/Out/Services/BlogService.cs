@@ -1,5 +1,5 @@
-﻿using RestAPICore.Models;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
+using RestAPICore.Models;
 using System.Collections.Generic;
 using System.Linq;
 

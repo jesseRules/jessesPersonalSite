@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Web.Resource;
 using RestAPICore.Models;
 using RestAPICore.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Security.Claims;
 
 namespace RestAPICore.Controllers
@@ -18,9 +14,9 @@ namespace RestAPICore.Controllers
     {
         private readonly BlogService _blogService;
 
-        // The Web API will only accept tokens 1) for users, and 
+        // The Web API will only accept tokens 1) for users, and
         // 2) having the access_as_user scope for this API
-        static readonly string[] scopeRequiredByApi = new string[] { "access_as_user" };
+        private static readonly string[] scopeRequiredByApi = new string[] { "access_as_user" };
 
         public BlogController(BlogService blogService)
         {
@@ -36,7 +32,6 @@ namespace RestAPICore.Controllers
         public ActionResult<List<BlogModel>> Get() =>
             _blogService.Get();
 
-
         /// <summary>
         /// Gets a Blog Lists
         /// </summary>
@@ -47,11 +42,9 @@ namespace RestAPICore.Controllers
         [HttpGet("list", Name = "GetBlogList")]
         public ActionResult<List<BlogModel>> GetBlogList(Int32 count, Int32 offset)
         {
-
-            HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            // HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
             string owner = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             return _blogService.GetWithWait();
-
         }
 
         /// <summary>

@@ -1,6 +1,5 @@
-﻿using RestAPICore.Models;
-using MongoDB.Driver;
-using System.Collections.Generic;
+﻿using MongoDB.Driver;
+using RestAPICore.Models;
 using System.Linq;
 
 namespace RestAPICore.Services
@@ -25,7 +24,5 @@ namespace RestAPICore.Services
             _contacts.InsertOne(contact);
             return contact;
         }
-
-
     }
 }

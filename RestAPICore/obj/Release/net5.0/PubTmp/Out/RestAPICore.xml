@@ -25,6 +25,7 @@
             </summary>
             <typeparam name="T"></typeparam>
             <param name="value"></param>
+            <param name="caller"></param>
             <returns></returns>
         </member>
         <member name="M:RestAPICore.Common.Extensions.Helpers.Compress(System.Byte[])">
@@ -159,7 +160,7 @@
         </member>
         <member name="M:RestAPICore.Controllers.GooglePhotosController.getLibraryItems(System.String)">
             <summary>
-            Returns a library
+            Returns a library of photos
             </summary>
             <param name="id"></param>
             <returns></returns>
@@ -205,7 +206,7 @@
         </member>
         <member name="M:RestAPICore.Controllers.TwitterController.getTweetsByGeoLocation(System.String,System.String,System.Int32,System.Int32)">
             <summary>
-            Get Tweets by Geo Location 
+            Get Tweets by Geo Location
             </summary>
             <param name="lat"></param>
             <param name="lng"></param>
@@ -268,7 +269,7 @@
         <member name="F:RestAPICore.Models.GooglePhotosScope.ReadOnly">
              <summary>
              Read access only.
-             
+            
              List items from the library and all albums, access all media items and list albums owned by the user, including those which have been shared with them.
             
              For albums shared by the user, share properties are only returned if the.sharing scope has also been granted.
@@ -300,7 +301,7 @@
              Access to sharing calls.
             
              Access to create an album, share it, upload media items to it, and join a shared album.
-             </summary>   
+             </summary>
         </member>
         <member name="F:RestAPICore.Models.GooglePhotosPositionType.POSITION_TYPE_UNSPECIFIED">
             <summary>
@@ -659,13 +660,13 @@
             </summary>
         </member>
         <member name="M:RestAPICore.Services.GooglePhotosServiceBase.GetAlbumsAsync(System.Int32,System.Boolean,System.Threading.CancellationToken)">
-            <summary>
+             <summary>
             
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="pageSize">Maximum number of albums to return in the response. Fewer albums might be returned than the specified number. The default pageSize is 20, the maximum is 50.</param>
-            <param name="excludeNonAppCreatedData">If set, the results exclude media items that were not created by this app. Defaults to false (all albums are returned). This field is ignored if the photoslibrary.readonly.appcreateddata scope is used.</param>
-            <returns></returns>
+             </summary>
+             <param name="pageSize">Maximum number of albums to return in the response. Fewer albums might be returned than the specified number. The default pageSize is 20, the maximum is 50.</param>
+             <param name="excludeNonAppCreatedData">If set, the results exclude media items that were not created by this app. Defaults to false (all albums are returned). This field is ignored if the photoslibrary.readonly.appcreateddata scope is used.</param>
+             <param name="cancellationToken">Cancel Token</param>
+             <returns></returns>
         </member>
     </members>
 </doc>

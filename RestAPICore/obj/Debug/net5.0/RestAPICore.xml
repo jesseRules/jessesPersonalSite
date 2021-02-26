@@ -160,7 +160,7 @@
         </member>
         <member name="M:RestAPICore.Controllers.GooglePhotosController.getLibraryItems(System.String)">
             <summary>
-            Returns a library
+            Returns a library of photos
             </summary>
             <param name="id"></param>
             <returns></returns>

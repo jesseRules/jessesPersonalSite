@@ -2,6 +2,9 @@ C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Re
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Controllers\ChartsController.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Controllers\ContactController.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Controllers\GoogleMapController.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Controllers\GooglePhotosController.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Controllers\SubscriptionController.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Controllers\Twitter2Controller.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Controllers\TwitterController.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Models\BlogDBSettingsModel.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Models\BlogModel.cs
@@ -13,6 +16,11 @@ C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Re
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\BlogService.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\ContactService.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\CredentialService.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\GooglePhotosService.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\GooglePhotosServiceBase.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\HttpClientBase.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\SubscriptionsService.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\Twitter2Service.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\Services\TwitterService.cs
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\RestAPICore.exe
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\obj\Release\net5.0\PubTmp\Out\wwwroot\index.html

@@ -90,3 +90,14 @@ C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\De
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Polly.Extensions.Http.dll
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Azure.Storage.Blobs.dll
 C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Azure.Storage.Common.dll
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\appsettings.json
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Controllers\GooglePhotosController.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Controllers\SubscriptionController.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Controllers\Twitter2Controller.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Services\CredentialService.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Services\GooglePhotosService.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Services\GooglePhotosServiceBase.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Services\HttpClientBase.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Services\SubscriptionsService.cs
+C:\Users\jesse\OneDrive\Documents\projects\jesseRules\RestApi\RestAPICore\bin\Debug\net5.0\Services\Twitter2Service.cs

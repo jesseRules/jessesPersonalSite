@@ -1,11 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RestAPICore.Models;
 using RestAPICore.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestAPICore.Controllers
 {
@@ -51,7 +46,5 @@ namespace RestAPICore.Controllers
 
             return CreatedAtRoute("GetContact", new { id = contact.Id.ToString() }, contact);
         }
-
-
     }
 }

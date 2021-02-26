@@ -1,6 +1,5 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using Newtonsoft.Json;
 
 namespace RestAPICore.Models
 {
@@ -9,6 +8,7 @@ namespace RestAPICore.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
         public string pubDate { get; set; }
         public string thumbImageURL { get; set; }
         public string mainImageURL { get; set; }
@@ -20,6 +20,5 @@ namespace RestAPICore.Models
         public string description { get; set; }
         public string content_html { get; set; }
         public string content_markdown { get; set; }
-
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace RestAPICore.Models
+﻿namespace RestAPICore.Models
 {
     public class BlogDBSettingsModel : IBlogDBSettingsModel
     {
@@ -11,6 +6,7 @@ namespace RestAPICore.Models
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
     }
+
     public interface IBlogDBSettingsModel
     {
         string BlogCollectionName { get; set; }

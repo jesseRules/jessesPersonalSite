@@ -1,6 +1,14 @@
 ﻿namespace RestAPICore.Models
 {
-    public class AzureStorageConfig
+    public class AzureStorageConfig : IAzureStorageConfig
+    {
+        public string AccountName { get; set; }
+        public string AccountKey { get; set; }
+        public string ImageContainer { get; set; }
+        public string ThumbnailContainer { get; set; }
+    }
+
+    public interface IAzureStorageConfig
     {
         public string AccountName { get; set; }
         public string AccountKey { get; set; }

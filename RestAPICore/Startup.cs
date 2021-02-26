@@ -61,24 +61,14 @@ namespace RestAPICore
 
             services.AddSingleton<SubscriptionsService>();
 
-            // Adding in Twitter Service with Connection Strings
-            services.Configure<TwitterConnectionSettings>(
-                Configuration.GetSection(nameof(TwitterConnectionSettings)));
+            // Adding in AZ Image Service with Connection Strings
+            services.Configure<AzureStorageConfig>(
+                Configuration.GetSection(nameof(AzureStorageConfig)));
 
-            services.AddSingleton<ITwitterConnectionSettings>(sp =>
-                sp.GetRequiredService<IOptions<TwitterConnectionSettings>>().Value);
+            services.AddSingleton<IAzureStorageConfig>(sp =>
+                sp.GetRequiredService<IOptions<AzureStorageConfig>>().Value);
 
-            services.AddSingleton<TwitterService>();
-            services.AddSingleton<Twitter2Service>();
-
-            // Adding in Google API Service with Connection Strings
-            services.Configure<GoogleConnectionsSettings>(
-                Configuration.GetSection(nameof(GoogleConnectionsSettings)));
-
-            services.AddSingleton<IGoogleConnectionsSettings>(sp =>
-                sp.GetRequiredService<IOptions<GoogleConnectionsSettings>>().Value);
-
-            services.AddSingleton<GooglePhotosService>();
+            services.AddSingleton<AzPhotoService>();
 
             services.AddControllers()
                 .AddNewtonsoftJson(options => options.UseMemberCasing());

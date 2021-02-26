@@ -1,6 +1,5 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using Newtonsoft.Json;
 
 namespace RestAPICore.Models
 {
@@ -9,6 +8,7 @@ namespace RestAPICore.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
         public string name { get; set; }
         public string email { get; set; }
         public string message { get; set; }

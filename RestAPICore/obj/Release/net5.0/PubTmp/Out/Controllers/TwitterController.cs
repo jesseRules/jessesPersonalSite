@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestAPICore.Controllers
 {
@@ -12,12 +9,13 @@ namespace RestAPICore.Controllers
     [ApiController]
     public class TwitterController : ControllerBase
     {
-        Services.TwitterService twitterService = new Services.TwitterService
+        private Services.TwitterService twitterService = new Services.TwitterService
         {
             //Your Twitter App details here
             OAuthConsumerKey = Services.CredentialService.twitterKey,
             OAuthConsumerSecret = Services.CredentialService.twitterSecret
         };
+
         /// <summary>
         /// Get Tweets bt UserName limit 100
         /// </summary>
@@ -36,8 +34,9 @@ namespace RestAPICore.Controllers
             string lookBack = DateTime.Now.ToString("yyyy-MM-dd");
             return twitterService.getTweetsByUser(userName, lookBack, tweetCount);
         }
+
         /// <summary>
-        /// Get Tweets by Geo Location 
+        /// Get Tweets by Geo Location
         /// </summary>
         /// <param name="lat"></param>
         /// <param name="lng"></param>
@@ -54,6 +53,7 @@ namespace RestAPICore.Controllers
             }
             return twitterService.getTweetsByGeo(lat, lng, radiusMiles, tweetCount);
         }
+
         /// <summary>
         /// Search Twitter by Keyword
         /// </summary>
