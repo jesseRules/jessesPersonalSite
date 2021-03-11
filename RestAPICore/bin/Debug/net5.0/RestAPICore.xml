@@ -165,6 +165,42 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:RestAPICore.Controllers.JHExampleController.GetByCounty(System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.JHExampleController.GetByCountyMinimal(System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.JHExampleController.GetByCountyChart(System.String,System.Int32)">
+            <summary>
+            Returns data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.JHExampleController.GetByCountyChartJs(System.String,System.Int32)">
+            <summary>
+            Returns data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.JHExampleController.GetByStateChartJs(System.String,System.Int32)">
+            <summary>
+            Returns data by State
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestAPICore.Controllers.JHExampleController.GetStatesRef">
+            <summary>
+            Returns list of states
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:RestAPICore.Controllers.SubscriptionController.Get(System.String)">
             <summary>
             Gets a Subscription Entry by ID

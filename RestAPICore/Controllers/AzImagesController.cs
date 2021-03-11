@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using RestAPICore.Common.Extensions;
@@ -26,6 +27,7 @@ namespace RestAPICore.Controllers
         }
 
         // POST /api/images/upload
+        [Authorize]
         [HttpPost("[action]")]
         public IActionResult Upload(ICollection<IFormFile> files)
         {
